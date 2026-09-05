@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A08BC2E0-5BFD-400D-B462-AD220AEA6400}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>M62Logic</RootNamespace>
+    <AssemblyName>M62Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <DerailValleyDir Condition=" '$(DerailValleyDir)' == '' ">E:\steam\steamapps\common\Derail Valley</DerailValleyDir>
+    <DerailValleyManaged>$(DerailValleyDir)\DerailValley_Data\Managed</DerailValleyManaged>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="0Harmony">
+      <HintPath>$(DerailValleyManaged)\UnityModManager\0Harmony.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(DerailValleyManaged)\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DV.BrakeSystem">
+      <HintPath>$(DerailValleyManaged)\DV.BrakeSystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DV.PointSet">
+      <HintPath>$(DerailValleyManaged)\DV.PointSet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DV.RailTrack">
+      <HintPath>$(DerailValleyManaged)\DV.RailTrack.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DV.SignPlacer">
+      <HintPath>$(DerailValleyManaged)\DV.SignPlacer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DV.Simulation">
+      <HintPath>$(DerailValleyManaged)\DV.Simulation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="net.smkd.vector3d">
+      <HintPath>$(DerailValleyManaged)\net.smkd.vector3d.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(DerailValleyManaged)\UnityEngine.AudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(DerailValleyManaged)\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(DerailValleyManaged)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>$(DerailValleyManaged)\UnityEngine.ParticleSystemModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(DerailValleyManaged)\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>$(DerailValleyManaged)\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>$(DerailValleyManaged)\UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityModManager">
+      <HintPath>$(DerailValleyManaged)\UnityModManager\UnityModManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WorldStreamer">
+      <HintPath>$(DerailValleyManaged)\WorldStreamer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlsnSystem.cs" />
+    <Compile Include="AmbientTemperatureRegistry.cs" />
+    <Compile Include="DefaultAmbientProvider.cs" />
+    <Compile Include="DvSeasonsAmbientProvider.cs" />
+    <Compile Include="IAmbientTemperatureProvider.cs" />
+    <Compile Include="M62ModSettings.cs" />
+    <Compile Include="SeasonsIntegrationBootstrap.cs" />
+    <Compile Include="SignBasedAlsnProvider.cs" />
+    <Compile Include="IAlsnLampProvider.cs" />
+    <Compile Include="EpkLogic.cs" />
+    <Compile Include="AlsnTrackState.cs" />
+    <Compile Include="AlsnLampRegistry.cs" />
+    <Compile Include="AlsnLampCode.cs" />
+    <Compile Include="BrakesAudioModule_UpdateModule_Prefix.cs" />
+    <Compile Include="BrakeSystem_SimulateTrainBrake_Patch.cs" />
+    <Compile Include="DualSpeedLimitEvent.cs" />
+    <Compile Include="FastPort.cs" />
+    <Compile Include="GaugeData.cs" />
+    <Compile Include="GaugeUtils.cs" />
+    <Compile Include="JunctionEvent.cs" />
+    <Compile Include="M62PatchCache.cs" />
+    <Compile Include="M62AudioManager.cs" />
+    <Compile Include="M62Controller.cs" />
+    <Compile Include="M62_OilLouverBehavior.cs" />
+    <Compile Include="M62_394_Behavior.cs" />
+    <Compile Include="M62_Clock_Behavior.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpeedLimitEvent.cs" />
+    <Compile Include="StreamerPatch.cs" />
+    <Compile Include="TrackEvent.cs" />
+    <Compile Include="TrackFollower.cs" />
+    <Compile Include="TrackIndexer.cs" />
+    <Compile Include="TractionMotorSet_Tick_Patch.cs" />
+    <Compile Include="TrainCar_Start_Patch.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

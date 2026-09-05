@@ -1,0 +1,6 @@
+c:\Users\bublik\Desktop\M62Logic\M62Logic.Signals\obj\Debug\M62Logic.Signals.csproj.AssemblyReference.cache
+c:\Users\bublik\Desktop\M62Logic\M62Logic.Signals\obj\Debug\M62Logic.Signals.csproj.CoreCompileInputs.cache
+c:\Users\bublik\Desktop\M62Logic\bin\Debug\M62Logic.Signals.dll
+c:\Users\bublik\Desktop\M62Logic\bin\Debug\M62Logic.Signals.pdb
+c:\Users\bublik\Desktop\M62Logic\M62Logic.Signals\obj\Debug\M62Logic.Signals.dll
+c:\Users\bublik\Desktop\M62Logic\M62Logic.Signals\obj\Debug\M62Logic.Signals.pdb
